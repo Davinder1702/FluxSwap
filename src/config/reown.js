@@ -46,7 +46,12 @@ createAppKit({
         analytics: false,  // Disable analytics
         swaps: false,      // Disable swap feature
         onramp: false,     // Disable fiat onramp
+        email: false,      // Disable email login (prevents auth state checks)
+        socials: false,    // Disable social logins
     },
+
+    // Disable balance fetching - this is the main cause of the infinite loader on testnets
+    enableWalletFeatures: false,
 
     enableWalletGuide: false,
 });

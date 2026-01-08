@@ -41,7 +41,7 @@ export const NETWORKS = {
         },
         rpcUrls: {
             default: {
-                http: ["https://rpc-amoy.polygon.technology"],
+                http: ["https://polygon-amoy.drpc.org"],
             },
         },
         blockExplorers: {

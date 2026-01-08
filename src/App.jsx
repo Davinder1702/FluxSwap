@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 import {
-    AppKitButton,
+    useAppKit,
     useAppKitAccount,
     useAppKitProvider,
 } from "@reown/appkit/react";
@@ -21,8 +21,9 @@ function AppContent() {
     const [myContract, setMyContract] = useState(null);
     const [myUSDC, setMyUSDC] = useState(null);
     const [myWETH, setMyWETH] = useState(null);
-    const { isConnected } = useAppKitAccount();
+    const { address, isConnected } = useAppKitAccount();
     const { walletProvider } = useAppKitProvider("eip155");
+    const { open } = useAppKit();
 
     // Setup contract when wallet is connected
     useEffect(() => {
@@ -60,13 +61,35 @@ function AppContent() {
         setupContract();
     }, [isConnected, walletProvider]);
 
+
+    // Handle button click - open AppKit modal for both connect and account management
+    const handleButtonClick = () => {
+        open();
+    };
+
     return (
         <div className="pageBody">
             <div className="navBar">
                 <div className="navLogoContainer">
                     <img src="/logo.png" className="appLogo" alt="FluxSwap Logo" />
                 </div>
-                <AppKitButton />
+                {isConnected ? (
+                    <button 
+                        className="connected" 
+                        onClick={handleButtonClick}
+                        type="button"
+                    >
+                        {"Connected to " + address?.slice(0, 6) + "..." + address?.slice(-4)}
+                    </button>
+                ) : (
+                    <button 
+                        className="connectBtn" 
+                        onClick={handleButtonClick}
+                        type="button"
+                    >
+                        Connect Wallet
+                    </button>
+                )}
             </div>
             <ContainerComponent
                 contract={myContract}
