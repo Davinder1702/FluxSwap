@@ -22,22 +22,11 @@ This project focuses on:
 
 ✅ Polygon Amoy Testnet only
 
-Out of scope (intentionally):
-
-❌ Multi-pair routing
-
-❌ Price oracles
-
-❌ Governance
-
-❌ Production-grade optimizations
-
 ## ✨ Features
 
 - 🔄 **Token Swapping** - Swap between USDC and WETH with real-time price estimation
 - 💧 **Liquidity Management** - Add and remove liquidity from the pool
 - 📊 **Pool Details** - Real-time pool statistics and user holdings
-- 🎨 **Premium UI** - Modern glassmorphic design with smooth animations
 - 🔐 **Multi-Wallet Support** - Powered by Reown AppKit (WalletConnect)
 - 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile
 - 🌐 **Multi-Chain** - Support for Polygon Amoy Testnet
@@ -56,8 +45,8 @@ Out of scope (intentionally):
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/SamridhChicmic/aggregator.git
-   cd aggregator
+   git clone https://github.com/rishabhkushwaha17/FluxSwap.git
+   cd FluxSwap
    ```
 
 2. **Install dependencies**
@@ -66,15 +55,7 @@ Out of scope (intentionally):
 
    ```
 
-3. **Configure environment variables**
-   
-   Create a `.env` file in the root directory:
-   ```env
-   # Reown AppKit Configuration
-   REACT_APP_REOWN_PROJECT_ID=your_project_id_here
-   ```
-
-4. **Start the development server**
+3. **Start the development server**
    ```bash
    npm start
    ```
@@ -82,7 +63,7 @@ Out of scope (intentionally):
 ## 📁 Project Structure
 
 ```
-aggregator/
+FluxSwap/
 ├── public/
 │   └── index.html
 ├── src/
@@ -102,7 +83,6 @@ aggregator/
 │   ├── constants.js         # Contract ABI and addresses
 │   ├── styles.css           # Global styles
 │   └── index.js             # App entry point
-├── .env                     # Environment variables
 ├── package.json             # Dependencies and scripts
 └── README.md
 ```
@@ -170,14 +150,6 @@ export const WETH_CONFIG = {
 ## 🔌 Wallet Integration
 
 The app uses **Reown AppKit** (formerly WalletConnect) for wallet connectivity.
-
-### Setup
-
-1. Get a Project ID from [Reown Dashboard](https://dashboard.reown.com)
-2. Add to `.env`:
-   ```env
-   REACT_APP_REOWN_PROJECT_ID=your_project_id
-   ```
 
 ### Supported Wallets
 
