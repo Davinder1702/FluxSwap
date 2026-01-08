@@ -29,7 +29,6 @@ This project focuses on:
 - 📊 **Pool Details** - Real-time pool statistics and user holdings
 - 🔐 **Multi-Wallet Support** - Powered by Reown AppKit (WalletConnect)
 - 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile
-- 🌐 **Multi-Chain** - Support for Polygon Amoy Testnet
 - ⚡ **Slippage Protection** - Configurable slippage tolerance
 
 ## 🚀 Quick Start
