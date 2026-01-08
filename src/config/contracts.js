@@ -15,7 +15,7 @@ export const CONTRACTS = {
     },
 
     POLYGON_AMOY: {
-        address: "0xE32383aB1dbea75Fa416CB7cA200b0e1c89735AC", // Currently deployed contract
+        address: "0xFB22B3EaD4f31221AB69dffbb9C5da6A569F449e", // Currently deployed contract
         abi: AMM_V1_ABI,
         name: "AMM Contract",
         version: "v1",
