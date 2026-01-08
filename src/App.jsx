@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 import {
-    useAppKit,
+    AppKitButton,
     useAppKitAccount,
     useAppKitProvider,
 } from "@reown/appkit/react";
@@ -21,8 +21,7 @@ function AppContent() {
     const [myContract, setMyContract] = useState(null);
     const [myUSDC, setMyUSDC] = useState(null);
     const [myWETH, setMyWETH] = useState(null);
-    const { open } = useAppKit();
-    const { address, isConnected } = useAppKitAccount();
+    const { isConnected } = useAppKitAccount();
     const { walletProvider } = useAppKitProvider("eip155");
 
     // Setup contract when wallet is connected
@@ -61,30 +60,16 @@ function AppContent() {
         setupContract();
     }, [isConnected, walletProvider]);
 
-    // Open Reown modal to connect wallet
-    const handleConnect = () => {
-        open();
-    };
-
     return (
         <div className="pageBody">
             <div className="navBar">
                 <div className="navLogoContainer">
                     <img src="/logo.png" className="appLogo" alt="FluxSwap Logo" />
                 </div>
-                {!isConnected ? (
-                    <div className="connectBtn" onClick={handleConnect}>
-                        Connect to MetaMask
-                    </div>
-                ) : (
-                    <div className="connected">
-                        {"Connected to " + address?.slice(0, 6) + "..." + address?.slice(-4)}
-                    </div>
-                )}
+                <AppKitButton />
             </div>
             <ContainerComponent
                 contract={myContract}
-                connect={handleConnect}
                 usdcContract={myUSDC}
                 wethContract={myWETH}
             />

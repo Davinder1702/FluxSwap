@@ -3,7 +3,7 @@ import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 import { http } from "wagmi";
 import { activeNetwork, ACTIVE_NETWORK } from "./networks";
 
-export const projectId = process.env.REACT_APP_REOWN_PROJECT_ID || "YOUR_PROJECT_ID";
+export const projectId = import.meta.env.VITE_REOWN_PROJECT_ID || "YOUR_PROJECT_ID";
 
 const metadata = {
     name: "FluxSwap",
@@ -36,11 +36,10 @@ createAppKit({
     defaultNetwork: activeNetwork,
     projectId,
 
+    // Restrict wallet selection to MetaMask only
     featuredWalletIds: [METAMASK_WALLET_ID],
     includeWalletIds: [METAMASK_WALLET_ID],
-
     allWallets: "HIDE",
-
     enableCoinbase: false,
 
     features: {

@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import { ethers } from "ethers";
 import "../styles.css";
 import BoxTemplate from "./BoxTemplate";
-import { PRECISION } from "../constants";
 import { getFriendlyErrorMessage, successMessages, warningMessages } from "../utils/errorHandler";
 
 export default function ProvideComponent(props) {

@@ -3,7 +3,6 @@ import { toast } from "react-toastify";
 import { ethers } from "ethers";
 import "../styles.css";
 import BoxTemplate from "./BoxTemplate";
-import { PRECISION } from "../constants.js";
 import { getFriendlyErrorMessage, successMessages, warningMessages } from "../utils/errorHandler";
 
 export default function WithdrawComponent(props) {

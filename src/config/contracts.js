@@ -1,5 +1,5 @@
 import { ACTIVE_NETWORK } from "./networks";
-import { AMM_V1_ABI, ORIGINAL, ERC20_ABI, USDC_ABI, WETH_ABI } from "./abis";
+import { AMM_V1_ABI, ERC20_ABI, USDC_ABI, WETH_ABI } from "./abis";
 
 
 export const CONTRACTS = {

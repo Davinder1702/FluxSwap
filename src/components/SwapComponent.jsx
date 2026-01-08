@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import { ethers } from "ethers";
 import "../styles.css";
 import BoxTemplate from "./BoxTemplate";
-import { PRECISION } from "../constants";
 import { getFriendlyErrorMessage, successMessages, warningMessages } from "../utils/errorHandler";
 
 export default function SwapComponent(props) {
@@ -94,7 +93,6 @@ export default function SwapComponent(props) {
 		} else {
 			try {
 				setLoading(true);
-				let response;
 				const minAmountOut = (amountTo * (100 - slippageTolerance)) / 100;
 				const deadline = Math.floor(Date.now() / 1000) + 60 * 20; // 20 minutes from now
 

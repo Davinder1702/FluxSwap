@@ -13,7 +13,7 @@ import { ethers } from "ethers";
 
 
 export default function ContainerComponent(props) {
-	const { address, isConnected } = useAppKitAccount();
+	const { address } = useAppKitAccount();
 	const [activeTab, setActiveTab] = useState("Swap");
 	const [amountOfUSDC, setAmountOfUSDC] = useState(0);
 	const [amountOfWETH, setAmountOfWETH] = useState(0);
@@ -55,7 +55,7 @@ export default function ContainerComponent(props) {
 		} catch (err) {
 			console.log("Couldn't Fetch holdings", err);
 		}
-	}, [props.contract]);
+	}, [props.contract, address, props.usdcContract, props.wethContract]);
 
 	useEffect(() => {
 		if (props.contract) {
