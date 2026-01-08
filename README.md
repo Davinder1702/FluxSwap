@@ -229,7 +229,6 @@ npm run eject      # Eject from Create React App
 - ✅ Check contract approval
 
 **Wallet Won't Connect:**
-- ✅ Verify Reown Project ID
 - ✅ Check network configuration
 - ✅ Clear browser cache
 - ✅ Try different wallet
