@@ -193,7 +193,6 @@ Configure in `src/config/reown.js`.
 ```bash
 npm start          # Start development server
 npm run build      # Create production build
-npm test           # Run test suite
 npm run eject      # Eject from Create React App
 ```
 
