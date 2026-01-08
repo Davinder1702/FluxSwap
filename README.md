@@ -35,8 +35,8 @@ This project focuses on:
 
 ### Prerequisites
 
-- **Node.js** v18.0.0 or higher
-- **npm** or **yarn**
+- **Node.js** v20.0.0 or higher
+- **Yarn** v1.22.0 or higher
 - **MetaMask** or compatible Web3 wallet
 - **Reown Project ID** ([Get one here](https://dashboard.reown.com))
 
@@ -50,13 +50,12 @@ This project focuses on:
 
 2. **Install dependencies**
    ```bash
-   npm install
-
+   yarn
    ```
 
 3. **Start the development server**
    ```bash
-   npm start
+   yarn start
    ```
 
 ## 📁 Project Structure
@@ -78,10 +77,11 @@ FluxSwap/
 │   │   └── reown.js               # Wallet connection config
 │   ├── utils/               # Utility functions
 │   │   └── errorHandler.js        # User-friendly error messages
-│   ├── App.js               # Main app component
+│   ├── App.jsx             # Main app component
 │   ├── constants.js         # Contract ABI and addresses
 │   ├── styles.css           # Global styles
-│   └── index.js             # App entry point
+│   └── index.jsx           # App entry point
+├── vite.config.js          # Vite configuration
 ├── package.json             # Dependencies and scripts
 └── README.md
 ```
@@ -190,9 +190,9 @@ Configure in `src/config/reown.js`.
 ### Available Scripts
 
 ```bash
-npm start          # Start development server
-npm run build      # Create production build
-npm run eject      # Eject from Create React App
+yarn start           # Start development server
+yarn build         # Create production build
+yarn preview       # Preview production build
 ```
 
 ### Code Style
